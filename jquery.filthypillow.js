@@ -429,6 +429,7 @@
     dateChange: function( ) {
       if( this.options.enableCalendar ) {
         this.calendar.setDate( this.dateTime );
+        this.$element.trigger("fp:datetimechange", [ this.dateTime ]);
         if( this.currentStep === "day" || this.currentStep === "month" )
           this.calendar.render( );
       }
